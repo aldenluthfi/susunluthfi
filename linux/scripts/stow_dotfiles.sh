@@ -1,0 +1,1 @@
+stow --dir=../dotfiles/*/ --target=$HOME
