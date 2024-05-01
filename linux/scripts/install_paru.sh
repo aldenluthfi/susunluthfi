@@ -1,4 +1,4 @@
-start = $(pwd)
+start=$(pwd)
 
 cd $(dirname $0)
 
