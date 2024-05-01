@@ -1,6 +1,6 @@
 start = $(pwd)
 
 cd $(dirname $0)/../dotfiles
-stow */ --target=$HOME
+stow */ -D --target=$HOME
 
 cd $start
