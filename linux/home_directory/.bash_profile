@@ -8,3 +8,5 @@ if [ ! -f $HOME/.local/share/bash/.bash_history ]; then
 fi
 
 EXPORT HISTFILE=$HOME/.local/share/bash/.bash_history
+
+Hyprland
