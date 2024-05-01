@@ -7,6 +7,6 @@ if [ ! -f $HOME/.local/share/bash/.bash_history ]; then
     touch $HOME/.local/share/bash/.bash_history
 fi
 
-EXPORT HISTFILE=$HOME/.local/share/bash/.bash_history
+export HISTFILE=$HOME/.local/share/bash/.bash_history
 
 Hyprland
