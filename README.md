@@ -1,2 +1,2 @@
 # ⚙️ SusunLuthfi
-All of my configurations, customizations, and creations ⚙️
+All of my configurations, customizations, and creations
