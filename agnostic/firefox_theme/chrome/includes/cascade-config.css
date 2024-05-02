@@ -7,7 +7,7 @@
 
   /*  Global Border Radius
    *  applied to ALL UI elements
-   */ --uc-border-radius: 0px;
+   */ --uc-border-radius: 5px;
 
 
   /*  The distance the Statuspanel floats
@@ -51,7 +51,7 @@
  *  and X = 0 means no darkening at all
  */
 @media (prefers-color-scheme: dark) { :root {
-  --uc-darken-toolbar: 0.2;
+  --uc-darken-toolbar: 0;
 }} @media (prefers-color-scheme: light) { :root {
   --uc-darken-toolbar: 0;
 }}
