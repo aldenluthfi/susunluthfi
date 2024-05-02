@@ -7,21 +7,21 @@
 
   /* These colours are (mainly) used by the
      Container Tabs Plugin */
-  --uc-identity-colour-blue:      #7ED6DF;
-  --uc-identity-colour-turquoise: #55E6C1;
-  --uc-identity-colour-green:     #B8E994;
-  --uc-identity-colour-yellow:    #F7D794;
-  --uc-identity-colour-orange:    #F19066;
-  --uc-identity-colour-red:       #FC5C65;
-  --uc-identity-colour-pink:      #F78FB3;
-  --uc-identity-colour-purple:    #786FA6;
+  --uc-identity-colour-blue:      #3C82F6;
+  --uc-identity-colour-turquoise: #06B6D4;
+  --uc-identity-colour-green:     #22C55D;
+  --uc-identity-colour-yellow:    #EBB305;
+  --uc-identity-colour-orange:    #F97315;
+  --uc-identity-colour-red:       #EF4444;
+  --uc-identity-colour-pink:      #D946EF;
+  --uc-identity-colour-purple:    #8B5CF6;
 
   /*  Cascades main Colour Scheme */
-  --uc-base-colour:               #1E2021;
-  --uc-highlight-colour:          #191B1C;
-  --uc-inverted-colour:           #FAFAFC;
-  --uc-muted-colour:              #AAAAAC;
-  --uc-accent-colour:             var(--uc-identity-colour-purple);
+  --uc-base-colour:               #18181B;
+  --uc-highlight-colour:          #27272A;
+  --uc-inverted-colour:           #FAFAFA;
+  --uc-muted-colour:              #A1A1AA;
+  --uc-accent-colour:             #BE133C;
 
 }}
 
@@ -30,21 +30,21 @@
 
   /* These colours are (mainly) used by the
      Container Tabs Plugin */
-  --uc-identity-colour-blue:      #1D65F5;
-  --uc-identity-colour-turquoise: #209FB5;
-  --uc-identity-colour-green:     #40A02B;
-  --uc-identity-colour-yellow:    #E49320;
-  --uc-identity-colour-orange:    #FE640B;
-  --uc-identity-colour-red:       #FC5C65;
-  --uc-identity-colour-pink:      #EC83D0;
-  --uc-identity-colour-purple:    #822FEE;
+  --uc-identity-colour-blue:      #2463EB;
+  --uc-identity-colour-turquoise: #0A91B1;
+  --uc-identity-colour-green:     #17A34A;
+  --uc-identity-colour-yellow:    #CA8A03;
+  --uc-identity-colour-orange:    #EA580B;
+  --uc-identity-colour-red:       #DC2625;
+  --uc-identity-colour-pink:      #C125D3;
+  --uc-identity-colour-purple:    #7C3AED;
 
   /*  Cascades main Colour Scheme */
-  --uc-base-colour:               #FAFAFC;
-  --uc-highlight-colour:          #DADADC;
-  --uc-inverted-colour:           #1E2021;
-  --uc-muted-colour:              #191B1C;
-  --uc-accent-colour:             var(--uc-identity-colour-purple);
+  --uc-base-colour:               #FAFAFA;
+  --uc-highlight-colour:          #D4D4D8;
+  --uc-inverted-colour:           #27272A;
+  --uc-muted-colour:              #18181B;
+  --uc-accent-colour:             #BE133C;
 
 }}
 
