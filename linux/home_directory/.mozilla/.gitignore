@@ -1,5 +1,5 @@
 *
 !.gitignore
-!profiles.ini
-!install.ini
-!*.default-release/
+!**/profiles.ini
+!**/install.ini
+!**/*.default-release/
