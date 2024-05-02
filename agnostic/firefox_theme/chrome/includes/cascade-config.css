@@ -91,22 +91,22 @@
 #forward-button { display: none !important; }
 
 /* Disables the Tracking Protection Shield */
-/* #tracking-protection-icon-container { display: none !important; } */
+tracking-protection-icon-container { display: none !important; }
 
 /* Encryption and Permissions icons */
   /* Only hides permission items */
-  #identity-permission-box { display: none !important; }
+  /* #identity-permission-box { display: none !important; } */
   /* Hides encryption AND permission items */
-  /* #identity-box { display: none !important } */
+  #identity-box { display: none !important }
 
 /* Hide everything BUT the zoom indicator within the URL Bar */
-/* #page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; } */
+#page-action-buttons > :not(#urlbar-zoom-button) { display: none !important; }
 
 /* Hide the »Go«-arrow in the URL Bar */
 #urlbar-go-button { display: none !important; }
 
 /* Hides the Extensions Menu Icon */
-#unified-extensions-button { display: none !important; }
+/* #unified-extensions-button { display: none !important; } */
 
 
 
