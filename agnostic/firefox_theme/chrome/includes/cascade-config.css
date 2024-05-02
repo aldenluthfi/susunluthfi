@@ -87,8 +87,8 @@
 
 
 /* Disable the Navigation Buttons */
-#back-button,
-#forward-button { display: none !important; }
+/* #back-button,
+#forward-button { display: none !important; } */
 
 /* Disables the Tracking Protection Shield */
 tracking-protection-icon-container { display: none !important; }
@@ -106,7 +106,7 @@ tracking-protection-icon-container { display: none !important; }
 #urlbar-go-button { display: none !important; }
 
 /* Hides the Extensions Menu Icon */
-/* #unified-extensions-button { display: none !important; } */
+#unified-extensions-button { display: none !important; }
 
 
 
