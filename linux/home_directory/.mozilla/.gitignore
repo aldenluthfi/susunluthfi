@@ -1,7 +1,4 @@
-*
-!.gitignore
-
-*/
-!*/profiles.ini
-!*/installs.ini
-!*.default-release/
+firefox/
+!firefox/profiles.ini
+!firefox/installs.ini
+!firefox.default-release/
