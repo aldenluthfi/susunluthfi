@@ -70,8 +70,8 @@
   --toolbar-field-focus-border-color: transparent !important;
 
   --toolbar-field-background-color: var(--uc-highlight-colour) !important;
-  --lwt-toolbar-field-highlight: var(--uc-inverted-colour) !important;
-  --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important;
+  --lwt-toolbar-field-highlight: var(--uc-accent-colour) !important;
+  --lwt-toolbar-field-highlight-text: var(--uc-inverted-colour) !important;
   --urlbar-popup-url-color: var(--uc-accent-colour) !important;
 
   --lwt-tab-text: var(--lwt-text-colour) !important;
