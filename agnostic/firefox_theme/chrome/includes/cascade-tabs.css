@@ -151,5 +151,6 @@
 
 /* selected tab colour fix*/
 .tabbrowser-tab[selected] .tab-content {
+  border-radius: var(--uc-border-radius) !important;
   background-color: var(--uc-highlight-colour) !important;
 }
