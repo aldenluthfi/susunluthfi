@@ -69,7 +69,7 @@
   /*  Width of the URL Bar for the Oneline layout
    *  If enabled the max-width is applied on focus
    *  otherwise the URL Bar will always be it's min-width
-   */ --uc-urlbar-min-width: 20vw;
+   */ --uc-urlbar-min-width: 0vw;
       --uc-urlbar-max-width: 35vw;
 
   /*  Position of the URL Bar
@@ -91,7 +91,7 @@
 #forward-button { display: none !important; } */
 
 /* Disables the Tracking Protection Shield */
-tracking-protection-icon-container { display: none !important; }
+#tracking-protection-icon-container { display: none !important; }
 
 /* Encryption and Permissions icons */
   /* Only hides permission items */
@@ -121,7 +121,7 @@ tracking-protection-icon-container { display: none !important; }
 
   /*  Allow tabs to have dynamic widths based on
    *  the Tab Bars maximum width
-   */ --uc-active-tab-width:   clamp(100px, 30vw, 300px);
+   */ --uc-active-tab-width:   clamp(100px, 20vw, 300px);
       --uc-inactive-tab-width: clamp(100px, 20vw, 200px);
 
 
