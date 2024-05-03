@@ -150,7 +150,11 @@
 #TabsToolbar .tab-icon-overlay:not([crashed])[activemedia-blocked]:hover { color: var(--toolbar-bgcolor) !important; }
 
 /* selected tab colour fix*/
-.tabbrowser-tab[selected] .tab-content {
+.tabbrowser-tab[selected] {
   border-radius: var(--uc-border-radius) !important;
+  background-color: var(--uc-base-colour) !important;
+}
+
+.tab-background[selected] {
   background-color: var(--uc-highlight-colour) !important;
 }
