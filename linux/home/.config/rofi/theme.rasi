@@ -42,7 +42,7 @@ configuration {
 window {
     /* properties for all widgets */
     enabled:                     true;
-    height:                      400px;
+    height:                      512px;
     margin:                      0px;
     padding:                     0px;
     border:                      2px solid;
