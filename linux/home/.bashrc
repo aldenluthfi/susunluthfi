@@ -2,6 +2,6 @@
 
 alias ls='ls --color=auto'
 PS1='┌─[\u@\h]──[\w]\n└─[i]→ \$ '
-PS0='\e[2A\e[2K> $(fc -ln -0 | xargs) \n'
+PS0='\e[2A\e[2Ke[0J> $(fc -ln -0 | xargs) \n'
 
 set -o vi
