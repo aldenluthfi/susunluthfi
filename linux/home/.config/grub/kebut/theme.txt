@@ -1,0 +1,27 @@
+# Global properties
+title-text: ""
+terminal-left: "0"
+terminal-top: "0"
+terminal-width: "100%"
+terminal-height: "100%"
+terminal-border: "0"
+terminal-box: "terminal_box_*.png"
+desktop-color: "#13161d"
+
++ boot_menu {
+  left = 25%
+  width = 50%
+  top = 25%
+  height = 50%
+  item_color = "#cccccc"
+  item_height = 26
+  item_padding = 14
+  item_icon_space = 0
+  item_spacing = 15
+  selected_item_color = "#cccccc"
+  selected_item_pixmap_style = "selected_item_*.png"
+  icon_width = 0
+  item_icon_space = 0
+  scrollbar = false
+  menu_pixmap_style = "boot_menu_*.png"
+}
