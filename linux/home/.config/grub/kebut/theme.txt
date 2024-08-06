@@ -1,27 +1,28 @@
 # Global properties
 title-text: ""
+terminal-font: "Fira Code Regular 22"
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 terminal-box: "terminal_box_*.png"
-desktop-color: "#13161d"
+desktop-color: "#18181b"
 
 + boot_menu {
-  left = 25%
-  width = 50%
-  top = 25%
-  height = 50%
-  item_color = "#cccccc"
-  item_height = 26
-  item_padding = 14
-  item_icon_space = 0
+  left = 43%
+  width = 14%
+  top = 50%-90
+  height = 120
+  item_color = "#d4d4d8"
+  item_height = 30
+  item_padding = 15
   item_spacing = 15
-  selected_item_color = "#cccccc"
+  selected_item_color = "#d4d4d8"
   selected_item_pixmap_style = "selected_item_*.png"
-  icon_width = 0
-  item_icon_space = 0
+  icon_width = 30
+  icon_height = 30
+  item_icon_space = 10
   scrollbar = false
   menu_pixmap_style = "boot_menu_*.png"
 }
