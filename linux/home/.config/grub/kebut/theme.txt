@@ -14,12 +14,12 @@ desktop-color: "#09090b"
   width = 14%
   top = 50%-90
   height = 120
-  item_color = "#18181b"
+  item_color = "#d4d4d8"
   item_height = 30
   item_padding = 15
   item_spacing = 15
-  selected_item_color = "#d4d4d8"
-  # selected_item_pixmap_style = "selected_item_*.png"
+  selected_item_color = "#fafafa"
+  selected_item_pixmap_style = "selected_item_*.png"
   icon_width = 30
   icon_height = 30
   item_icon_space = 10
