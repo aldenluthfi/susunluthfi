@@ -1,4 +1,4 @@
 set editing-mode vi
 set show-mode-in-prompt on
-set vi-ins-mode-string "\r\e[0K└─[i]→ \$ \1\e[5 q\2"
-set vi-cmd-mode-string "\r\e[0K└─[n]→ \$ \1\e[1 q\2"
+set vi-ins-mode-string "└─[i]→ \$ "
+set vi-cmd-mode-string "└─[n]→ \$ "
