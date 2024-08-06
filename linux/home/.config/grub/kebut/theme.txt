@@ -7,7 +7,7 @@ terminal-width: "100%"
 terminal-height: "100%"
 terminal-border: "0"
 terminal-box: "terminal_box_*.png"
-desktop-color: "#18181b"
+desktop-color: "#09090b"
 
 + boot_menu {
   left = 43%
