@@ -14,7 +14,7 @@ desktop-color: "#09090b"
   width = 14%
   top = 50%-90
   height = 120
-  item_color = "#d4d4d8"
+  item_color = "#a1a1aa"
   item_height = 30
   item_padding = 15
   item_spacing = 15

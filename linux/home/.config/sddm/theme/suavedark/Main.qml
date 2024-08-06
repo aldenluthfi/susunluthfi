@@ -72,16 +72,16 @@ Rectangle {
         id: centerBox
         anchors.centerIn: parent
 	spacing: 24
-			
+
 	Image {
-		
+
 		id: ava
-    		width: 80
+    	width: 80
 		height: 80
 		sourceSize.width: 120
 		sourceSize.height: 120
 		visible: true
-    		fillMode: Image.PreserveAspectFit
+    	fillMode: Image.PreserveAspectFit
 		anchors.horizontalCenter: parent.horizontalCenter
 
 		layer.enabled: true
