@@ -23,7 +23,7 @@ desktop-color: "#09090b"
   selected_item_pixmap_style = "selected_item_*.png"
   icon_width = 30
   icon_height = 30
-  item_icon_space = 10
+  item_icon_space = 5
   scrollbar = false
   menu_pixmap_style = "boot_menu_*.png"
 }
