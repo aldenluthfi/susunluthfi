@@ -1,3 +1,6 @@
 [user]
 	email = aldenluthfi@gmail.com
 	name = aldenluthfi
+	signingkey = /home/aldenluthfi/.ssh/masterkey
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com
