@@ -1,11 +1,11 @@
 /*****----- Configuration -----*****/
 configuration {
-	modi:                       "drun,run,filebrowser";
+    modi:                       "drun,run,filebrowser";
     show-icons:                 false;
     display-drun:               "Apps";
     display-run:                "Run";
     display-filebrowser:        "Files";
-	drun-display-format:        "{name}";
+    drun-display-format:        "{name}";
 }
 
 /*****----- Global Properties -----*****/
@@ -87,9 +87,9 @@ prompt {
 }
 textbox-prompt-colon {
     enabled:                     true;
-    padding:                     5px 0px;
+    padding:                     0px 0px;
     expand:                      false;
-    str:                         "";
+    str:                         "";
     background-color:            inherit;
     text-color:                  inherit;
 }
