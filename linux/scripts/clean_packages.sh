@@ -1,2 +1,2 @@
-pacman -Qdtq | xargs sudo pacman -Rns
-paru -Qtdq | xargs paru -Rns
+sudo pacman -Rns $(pacman -Qdtq) --noconfirm
+paru -Rns $(paru -Qtdq)  --noconfirm
