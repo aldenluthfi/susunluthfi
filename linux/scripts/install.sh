@@ -1,5 +1,10 @@
-sudo pacman -Syu --noconfirm hyprland kitty git neovim openssh sddm fastfetch qt5-wayland qt6-wayland stow rsync os-prober ntfs-3g pipewire pipewire-alsa pipewire-jack pipewire-pulse gst-plugin-pipewire libpulse wireplumber xdg-desktop-portal-hyprland polkit-kde-agent
+cat pacman_packages | tr '\n' ' ' | xargs sudo pacman -Syu --noconfirm
+
 ./install_paru.sh
-paru rofi-lbonn-wayland-git ttf-firacode
-./sddm_config.sh
+./clean_packages.sh
+
+cat paru_packages | tr '\n' ' ' | xargs paru --noconfim
+
 ./stow_dotfiles.sh
+./sddm_config.sh
+sudo systemctl enable sddm
