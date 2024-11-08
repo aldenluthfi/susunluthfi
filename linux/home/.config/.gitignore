@@ -1,3 +1,5 @@
 pulse/*
 gtk-3.0/*
 dconf/*
+systemd/*
+pavucontrol.ini
