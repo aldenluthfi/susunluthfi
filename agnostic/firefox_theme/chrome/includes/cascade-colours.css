@@ -20,8 +20,8 @@
   --uc-base-colour:               #18181B;
   --uc-highlight-colour:          #27272A;
   --uc-inverted-colour:           #FAFAFA;
-  --uc-muted-colour:              #A1A1AA;
-  --uc-accent-colour:             #BE133C;
+  --uc-muted-colour:              #D4D4D8;
+  --uc-accent-colour:             #EBB305;
 
 }}
 
@@ -41,10 +41,10 @@
 
   /*  Cascades main Colour Scheme */
   --uc-base-colour:               #FAFAFA;
-  --uc-highlight-colour:          #D4D4D8;
-  --uc-inverted-colour:           #27272A;
-  --uc-muted-colour:              #18181B;
-  --uc-accent-colour:             #BE133C;
+  --uc-highlight-colour:          #27272A;
+  --uc-inverted-colour:           #18181B;
+  --uc-muted-colour:              #53535B;
+  --uc-accent-colour:             #EBB305;
 
 }}
 
@@ -71,7 +71,7 @@
 
   --toolbar-field-background-color: var(--uc-highlight-colour) !important;
   --lwt-toolbar-field-highlight: var(--uc-accent-colour) !important;
-  --lwt-toolbar-field-highlight-text: var(--uc-inverted-colour) !important;
+  --lwt-toolbar-field-highlight-text: var(--uc-highlight-colour) !important;
   --urlbar-popup-url-color: var(--uc-accent-colour) !important;
 
   --lwt-tab-text: var(--lwt-text-colour) !important;
