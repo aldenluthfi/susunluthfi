@@ -5,11 +5,12 @@ fastfetch
 grub-customizer
 gst-plugin-pipewire
 hyprland
+hyprpaper
 intel-ucode
 kitty
-less
 linux
 linux-firmware
+man-db
 neovim
 networkmanager
 ntfs-3g
@@ -17,7 +18,6 @@ openssh
 os-prober
 pavucontrol
 pipewire-alsa
-pipewire-jack
 pipewire-pulse
 polkit-kde-agent
 qt5-wayland
