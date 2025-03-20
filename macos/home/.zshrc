@@ -30,11 +30,3 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 zle -N del-prompt-accept-line
 bindkey "^M" del-prompt-accept-line
-
-export SSLKEYLOGFILE=~/.ssl/key.log
-
-alias gacs='git commit -Sam'
-alias porn="find Documents/p -not -name .DS_*  | tr '\n' '\0' | xargs -0 vlc -fZ"
-
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/aldenluthfi/.lmstudio/bin"
