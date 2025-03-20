@@ -1,7 +1,0 @@
-@import 'includes/cascade-colours.css';
-
-@-moz-document url("about:newtab") {
-  body {
-    background-color: var(--uc-base-colour) !important;
-  }
-}

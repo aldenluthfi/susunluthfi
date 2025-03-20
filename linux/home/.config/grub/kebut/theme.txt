@@ -9,13 +9,12 @@ terminal-box: "terminal_box_*.png"
 desktop-color: "#09090b"
 
 + boot_menu {
-  left = 45%
-  width = 10%
+  left = 44%
+  width = 12%
   top = 50%-60
-  height = 120
   item_color = "#a1a1aa"
   item_height = 30
-  item_padding = 15
+  item_padding = 5
   item_spacing = 15
   selected_item_color = "#fafafa"
   item_pixmap_style = "item_*.png"
