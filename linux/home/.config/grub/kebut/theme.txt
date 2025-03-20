@@ -10,7 +10,7 @@ desktop-color: "#09090b"
 
 + boot_menu {
   left = 43%
-  width = 14%
+  width = 120
   top = 50%-90
   height = 120
   item_color = "#a1a1aa"
