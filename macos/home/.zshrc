@@ -30,3 +30,5 @@ zle -N zle-line-init
 zle -N zle-keymap-select
 zle -N del-prompt-accept-line
 bindkey "^M" del-prompt-accept-line
+
+fastfetch
