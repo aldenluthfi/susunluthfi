@@ -3,7 +3,6 @@
   "logo": {
     "source": "~/.config/fastfetch/logo.txt",
     "padding": {
-      "top": 1,
       "right": 1
     },
     "color": {
