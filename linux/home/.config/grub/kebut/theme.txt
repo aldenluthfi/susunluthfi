@@ -1,5 +1,4 @@
 # Global properties
-title-text: ""
 terminal-left: "0"
 terminal-top: "0"
 terminal-width: "100%"
@@ -8,19 +7,30 @@ terminal-border: "0"
 terminal-box: "terminal_box_*.png"
 desktop-color: "#09090b"
 
-+ boot_menu {
-  item_font = "Terminus Regular 18"
++ label {
+  text = "Hello, World!"
+  font = "cherry Bold 13"
+  color = "#FAFAFA"
+  align = "center"
+  width = 240
+  left = 50%-120
   top = 50%-90
-  left = 50%-150
-  width = 300
+}
+
++ boot_menu {
+  item_font = "cherry Regular 13"
+  selected_item_font = "cherry Bold 13"
+  top = 50%-60
+  left = 50%-120
+  width = 240
   item_color = "#a1a1aa"
-  item_height = 40
+  item_height = 25
   item_spacing = 10
   selected_item_color = "#fafafa"
   item_pixmap_style = "item_*.png"
   selected_item_pixmap_style = "selected_item_*.png"
-  icon_width = 35
-  icon_height = 35
+  icon_width = 25
+  icon_height = 25
   item_icon_space = 5
   scrollbar = false
   menu_pixmap_style = "boot_menu_*.png"

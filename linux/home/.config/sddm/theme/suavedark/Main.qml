@@ -39,33 +39,23 @@ Rectangle {
         source: "./assets/Inter-Bold.ttf"
     }
 
-    Rectangle {
-	id: behind
-	anchors.fill: parent
-	color: "#09090b"
-
-    }
-
-//    Image {
-//        id: behind
-//        anchors.fill: parent
-//         source: config.background
-//         fillMode: Image.Stretch
-//         onStatusChanged: {
-//             if (config.type === "color") {
-//                 source = config.defaultBackground
-//             }
-//         }
+//    Rectangle {
+//	id: behind
+//	anchors.fill: parent
+//	color: "#09090b"
+//
 //    }
 
-    MultiEffect {
-        source: behind
-        anchors.fill: behind
-        brightness: -0.2
-        contrast: -0.45
-        blurEnabled: true
-        blurMax: 32
-        blur: 0.5
+    Image {
+        id: behind
+        anchors.fill: parent
+         source: config.background
+         fillMode: Image.Stretch
+         onStatusChanged: {
+             if (config.type === "color") {
+                 source = config.defaultBackground
+             }
+         }
     }
 
     ColumnLayout{
