@@ -9,7 +9,7 @@ desktop-color: "#09090b"
 
 + label {
   text = "Hello, World!"
-  font = "cherry Bold 13"
+  font = "AW Greybeard 15px Italic 15"
   color = "#FAFAFA"
   align = "center"
   width = 240
@@ -18,8 +18,8 @@ desktop-color: "#09090b"
 }
 
 + boot_menu {
-  item_font = "cherry Regular 13"
-  selected_item_font = "cherry Bold 13"
+  item_font = "AW Greybeard 15px Regular 15"
+  selected_item_font = "AW Greybeard 15px Bold 15"
   top = 50%-60
   left = 50%-120
   width = 240
