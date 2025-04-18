@@ -1,5 +1,0 @@
-#!/home/aldenluthfi/.pyenv/versions/3.13.2/bin/python3.13
-
-import pydoc
-if __name__ == '__main__':
-    pydoc.cli()
