@@ -1,1 +1,6 @@
-
+{
+    "settings": "IconSettings",
+    "macos": "IconBrandApple",
+    "windows": "IconBrandWindows",
+    "linux": "IconBrandDebian"
+}
