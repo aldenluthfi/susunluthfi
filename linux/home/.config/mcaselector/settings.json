@@ -1,0 +1,80 @@
+{
+  "locale": "en_GB",
+  "regionSelectionColor": "0xff7300cc",
+  "chunkSelectionColor": "0xff7300cc",
+  "pasteChunksColor": "0x00ff00cc",
+  "processThreads": 4,
+  "writeThreads": 4,
+  "maxLoadedFiles": 1,
+  "mcSavesDir": "/home/aldenluthfi",
+  "debug": false,
+  "recentWorlds": {
+    "1756390035558": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world/DIM-1",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world/DIM-1"
+      ]
+    },
+    "1756393662448": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/world/DIM-1"
+      ]
+    },
+    "1757515703133": {
+      "recentWorld": "/home/aldenluthfi/world",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/world",
+        "/home/aldenluthfi/world/DIM-1"
+      ]
+    },
+    "1757515836445": {
+      "recentWorld": "/home/aldenluthfi/world/DIM-1",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/world",
+        "/home/aldenluthfi/world/DIM-1"
+      ]
+    },
+    "1759593564672": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM-1",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM-1",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1"
+      ]
+    },
+    "1759593657467": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM-1",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1"
+      ]
+    },
+    "1759593698036": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM-1",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1"
+      ]
+    }
+  },
+  "recentFilterScripts": {},
+  "recentChangeScripts": {},
+  "recentOverlayScripts": {},
+  "filterScript": {
+    "saved": false,
+    "text": ""
+  },
+  "changeScript": {
+    "saved": false,
+    "text": ""
+  },
+  "overlayScript": {
+    "saved": false,
+    "text": ""
+  }
+}

@@ -6,3 +6,5 @@
 	insteadOf = https://github.com/
 [gpg]
 	format = ssh
+[safe]
+	directory = /mnt/susunluthfi
