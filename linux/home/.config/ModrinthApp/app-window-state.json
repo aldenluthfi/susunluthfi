@@ -1,16 +1,4 @@
 {
-  "modrinth-signin": {
-    "width": 420,
-    "height": 633,
-    "x": 0,
-    "y": 0,
-    "prev_x": 0,
-    "prev_y": 0,
-    "maximized": true,
-    "visible": true,
-    "decorated": true,
-    "fullscreen": false
-  },
   "signin": {
     "width": 1012,
     "height": 1133,
@@ -23,8 +11,20 @@
     "decorated": true,
     "fullscreen": false
   },
+  "modrinth-signin": {
+    "width": 420,
+    "height": 633,
+    "x": 0,
+    "y": 0,
+    "prev_x": 0,
+    "prev_y": 0,
+    "maximized": true,
+    "visible": true,
+    "decorated": true,
+    "fullscreen": false
+  },
   "main": {
-    "width": 1920,
+    "width": 1100,
     "height": 1080,
     "x": 0,
     "y": 0,
