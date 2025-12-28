@@ -53,12 +53,20 @@
         "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1"
       ]
     },
-    "1759593698036": {
+    "1766335986407": {
       "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
       "dimensionDirectories": [
         "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld",
         "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM-1",
         "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld/DIM1"
+      ]
+    },
+    "1766336030909": {
+      "recentWorld": "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld2/world",
+      "dimensionDirectories": [
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld2/world",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld2/world/DIM-1",
+        "/home/aldenluthfi/.local/share/ModrinthApp/profiles/Optimized/saves/serverworld2/world/DIM1"
       ]
     }
   },

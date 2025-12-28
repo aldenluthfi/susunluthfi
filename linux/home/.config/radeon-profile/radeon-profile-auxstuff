@@ -8,7 +8,21 @@
             <step temperature="65" speed="100"/>
         </fanProfile>
     </FanProfiles>
-    <Plots/>
+    <Plots>
+        <plot name="Clock" enabled="1" background="#efefef">
+            <axis align="left" enabled="1" unit="0" ticks="4" penStyle="1" penWidth="1" penColor="#efefef"/>
+            <serie align="left" id="0" color="#000000"/>
+            <serie align="left" id="1" color="#000000"/>
+            <axis align="right" enabled="0" unit="3145776" ticks="4" penStyle="1" penWidth="0" penColor="#efefef"/>
+        </plot>
+        <plot name="Temperature" enabled="1" background="#efefef">
+            <axis align="left" enabled="1" unit="2" ticks="4" penStyle="1" penWidth="1" penColor="#efefef"/>
+            <serie align="left" id="6" color="#00aa00"/>
+            <serie align="left" id="8" color="#0055ff"/>
+            <serie align="left" id="9" color="#aa0000"/>
+            <axis align="right" enabled="0" unit="3145776" ticks="4" penStyle="1" penWidth="0" penColor="#efefef"/>
+        </plot>
+    </Plots>
     <TopbarItems>
         <topbarItem type="1" primaryValueId="6" primaryColor="#000000" secondaryValueIdEnabled="0" secondaryValueId="0" secondaryColor="#000000" pieMaxValue="100"/>
         <topbarItem type="2" primaryValueId="13" primaryColor="#0000ff" secondaryValueIdEnabled="0" secondaryValueId="0" secondaryColor="#000000" pieMaxValue="100"/>
