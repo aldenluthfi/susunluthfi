@@ -1,5 +1,10 @@
 [user]
 	name = aldenluthfi
 	email = aldenluthfi@gmail.com
+	signingkey = /Users/aldenluthfi/.ssh/masterkey
 [credential]
 	helper = store
+[gpg]
+	format = ssh
+[url "ssh://git@github.com/"]
+	insteadOf = https://github.com/
