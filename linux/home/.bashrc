@@ -18,3 +18,6 @@ alias ls='ls --color=auto'
 PS0='\e[2A\e[2K\e[0J> $(fc -ln -0 | xargs) \n'
 
 fastfetch
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - bash)"

@@ -1,5 +1,14 @@
 {
   "plugins": {
+    "blink.cmp": {
+      "rev": "451168851e8e2466bc97ee3e026c3dcb9141ce07",
+      "src": "ssh://git@github.com/saghen/blink.cmp",
+      "version": "1.0.0 - 2.0.0"
+    },
+    "efmls-configs-nvim": {
+      "rev": "0b0ca5462a0a9c1233cc8359e64741d7d49fbbe4",
+      "src": "ssh://git@github.com/creativenull/efmls-configs-nvim"
+    },
     "fzf-lua": {
       "rev": "8a79ee54d6216d10b2f153921a12b152be0c1a20",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
@@ -8,17 +17,29 @@
       "rev": "7c4faa3540d0781a28588cafbd4dd187a28ac6e3",
       "src": "https://www.github.com/lewis6991/gitsigns.nvim"
     },
+    "mason-lspconfig.nvim": {
+      "rev": "a979821a975897b88493843301950c456a725982",
+      "src": "ssh://git@github.com/mason-org/mason-lspconfig.nvim"
+    },
+    "mason.nvim": {
+      "rev": "44d1e90e1f66e077268191e3ee9d2ac97cc18e65",
+      "src": "ssh://git@github.com/mason-org/mason.nvim"
+    },
     "mini.nvim": {
       "rev": "59f09943573c5348ca6c88393fa09ce3b66a7818",
       "src": "https://www.github.com/echasnovski/mini.nvim"
     },
+    "minintro.nvim": {
+      "rev": "d5d78a3d3870146cce607f15650d7bacabb51660",
+      "src": "ssh://git@github.com/SRCthird/minintro.nvim"
+    },
+    "nvim-lspconfig": {
+      "rev": "841c6d4139aedb8a3f2baf30cef5327371385b93",
+      "src": "https://www.github.com/neovim/nvim-lspconfig"
+    },
     "nvim-treesitter": {
       "rev": "6620ae1c44dfa8623b22d0cbf873a9e8d073b849",
-      "src": "https://github.com/nvim-treesitter/nvim-treesitter"
-    },
-    "telescope.nvim": {
-      "rev": "5255aa27c422de944791318024167ad5d40aad20",
-      "src": "https://github.com/nvim-telescope/telescope.nvim"
+      "src": "ssh://git@github.com/nvim-treesitter/nvim-treesitter"
     }
   }
 }
