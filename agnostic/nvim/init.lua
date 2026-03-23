@@ -1,12 +1,12 @@
 local config_path = vim.fn.stdpath("config")
-local current_path = vim.fn.expand('%:p') 
+local current_path = vim.fn.expand('%:p')
 if
 	vim.fn.isdirectory(config_path) == 0 -- create undodir if nonexistent
 then
 	vim.fn.mkdir(config_path, "p")
 end
-vim.fn.system("ln -s " .. current_path .. " " .. config_path)
-
+vim.g.name = "ln -s " .. current_path .. " " .. config_path
+vim.fn.system("ln -s " .. current_path .. " " .. config_path .. "/init.lua")
 
 -- ============================================================================
 -- OPTIONS
