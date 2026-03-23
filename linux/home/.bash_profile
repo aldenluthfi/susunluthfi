@@ -9,4 +9,4 @@ fi
 
 export HISTFILE=$HOME/.local/share/bash/.bash_history
 
-Hyprland
+start-hyprland

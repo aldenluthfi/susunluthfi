@@ -1,28 +1,37 @@
-base
-base-devel
-efibootmgr
-fastfetch
-grub-customizer
-gst-plugin-pipewire
-hyprland
-hyprpaper
-intel-ucode
-kitty
-linux
-linux-firmware
-man-db
-neovim
-networkmanager
-ntfs-3g
-openssh
-os-prober
-pavucontrol
-pipewire-alsa
-pipewire-pulse
-polkit-kde-agent
-qt5-wayland
-rsync
-sddm
-stow
-xdg-desktop-portal-hyprland
-xorg-xhost
+7zip 26.00-1
+base 3-3
+base-devel 1-2
+blueman 2.4.6-2
+dosfstools 4.2-5
+efibootmgr 18-3
+exfat-utils 1.4.0-4
+fastfetch 2.60.0-1
+feh 3.11.3-1
+fzf 0.70.0-1
+gst-plugin-pipewire 1:1.6.2-1
+hyprland 0.54.2-2
+hyprpaper 0.8.3-3
+intel-ucode 20260227-1
+kitty 0.46.2-1
+linux 6.19.9.arch1-1
+linux-firmware 20260309-1
+man-db 2.13.1-1
+networkmanager 1.56.0-1
+ntfs-3g 2022.10.3-2
+openssh 10.2p1-2
+os-prober 1.84-1
+pavucontrol 1:6.2-1
+pipewire-alsa 1:1.6.2-1
+pipewire-pulse 1:1.6.2-1
+polkit-kde-agent 6.6.3-1
+pyenv 1:2.6.26-1
+qt5-wayland 5.15.18+kde+r55-1
+rsync 3.4.1-2
+sddm 0.21.0-6
+stow 2.4.1-1
+tree 2.3.1-1
+tree-sitter-cli 0.25.10-3
+unzip 6.0-23
+xdg-desktop-portal-hyprland 1.3.11-3
+xorg-xhost 1.0.10-1
+zip 3.0-11

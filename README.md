@@ -69,7 +69,8 @@ README.md        # This file
 ## 🧩 Scripts Overview
 
 ### Linux/macOS
-- `stow_dotfiles.sh` / `unstow_dotfiles.sh`: Symlink or remove dotfiles using GNU Stow
+- `stow_dotfiles.sh`: Symlink dotfiles using GNU Stow
+- `unstow_dotfiles.sh`: Remove dotfiles using GNU Stow
 - `install.sh`: Install base packages (Linux)
 - `install_paru.sh`: Install Paru AUR helper (Linux)
 - `clean_packages.sh`: Clean up orphaned packages (Linux)

@@ -1,5 +1,11 @@
-paru
-paru-debug
-rofi-lbonn-wayland-git
-ttf-firacode
-zen-browser-bin
+grub-customizer 5.2.5-2
+modrinth-app-bin 0.12.4-1
+neovim-nightly-bin 0.12.0+dev+2550+gf847aa6208-1
+obs-pipewire-audio-capture 1.2.1-1
+paru 2.1.0-2
+paru-debug 2.0.4-1
+radeon-profile-daemon-git 20190603.r0.g7923bd6-2
+rcon-cli-bin 0.10.2-1
+rofi-lbonn-wayland-git 1.7.8.wayland1.r23.g3bec3fac-1
+ttf-firacode 6.2-2
+zen-browser-bin 1.19.3b-1
