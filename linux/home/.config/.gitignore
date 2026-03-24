@@ -1,5 +1,8 @@
-pulse/*
-gtk-3.0/*
-dconf/*
-systemd/*
-pavucontrol.ini
+!fastfetch/*
+!grub/*
+!hypr/*
+!kitty/*
+!nvim/*
+!sddm/*
+!rofi/*
+*
