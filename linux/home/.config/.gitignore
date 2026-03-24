@@ -1,8 +1,9 @@
-!fastfetch/*
-!grub/*
-!hypr/*
-!kitty/*
-!nvim/*
-!sddm/*
-!rofi/*
-*
+/*
+!.gitignore
+!fastfetch/
+!grub/
+!hypr/
+!kitty/
+!nvim/
+!sddm/
+!rofi/
