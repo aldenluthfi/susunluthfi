@@ -1,0 +1,1 @@
+/Users/aldenluthfi/susunluthfi/agnostic/nvim/init.lua
