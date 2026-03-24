@@ -1,0 +1,8 @@
+/*
+!.gitignore
+!.bash_profile
+!.bashrc
+!.gitconfig
+!.inputrc
+!.ssh/
+!.config/
