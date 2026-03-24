@@ -1,5 +1,5 @@
 local config_path = vim.fn.stdpath("config")
-local current_path = vim.fn.expand('%:p')
+local current_path = vim.fn.expand("%:p")
 if
 	vim.fn.isdirectory(config_path) == 0 -- create undodir if nonexistent
 then
@@ -396,7 +396,7 @@ function string:split(delimiter)
 end
 
 function get_hostname_logo()
-	local logo = vim.fn.system("fastfetch --structure none | sed 's/\x1b[[0-9;]*[a-zA-Z]//g'")
+	local logo = vim.fn.system('fastfetch --structure none | sed "s/\x1b[[0-9;]*[a-zA-Z]//g"')
 	logo = logo:gsub("%s+$", "")
 	logo = logo:gsub("\r\n", "\n")
 
@@ -404,9 +404,9 @@ function get_hostname_logo()
 end
 
 local color_map = {
-    lenstra = "#BE133C",
-    winawer = "#EBB305",
-    marhaen = "#0CA5E9"
+	lenstra = "#BE133C",
+	winawer = "#EBB305",
+	marhaen = "#0CA5E9",
 }
 
 require("minintro").setup({
