@@ -5,7 +5,6 @@ if
 then
 	vim.fn.mkdir(config_path, "p")
 end
-vim.g.name = "ln -s " .. current_path .. " " .. config_path
 vim.fn.system("ln -s " .. current_path .. " " .. config_path .. "/init.lua")
 
 -- ============================================================================
@@ -407,13 +406,14 @@ local color_map = {
 	lenstra = "#BE133C",
 	winawer = "#EBB305",
 	marhaen = "#0CA5E9",
+	maclaurin = "#8B5CF6"
 }
 
 require("minintro").setup({
 	title = get_hostname_logo(),
 	version = { "" },
 	info = { "" },
-	colors = { color_map[vim.loop.os_gethostname()] },
+	colors = { color_map[vim.loop.os_gethostname():gsub("%..*", ""):lower()] },
 })
 
 vim.api.nvim_create_autocmd("BufEnter", {
@@ -422,8 +422,9 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	callback = function()
 		local buf_name = vim.api.nvim_buf_get_name(0)
 		local hl = vim.api.nvim_get_hl(0, { name = "Cursor", link = false })
+        vim.g.name = buf_name
 
-		if buf_name == "" then
+		if buf_name == "" or bufname:match("minintro$") then
 			require("mini.trailspace").unhighlight()
 			vim.opt.cursorline = false
 			local hl = vim.api.nvim_get_hl_by_name("Cursor", true)
