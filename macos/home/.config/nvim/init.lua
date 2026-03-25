@@ -1,4 +1,5 @@
 vim.cmd.colorscheme("citra")
+local colors = vim.g.citra_colors
 
 -- ============================================================================
 -- OPTIONS
@@ -440,7 +441,15 @@ require("fzf-lua").setup({
 	},
 	actions = {
 		["files"] = {
-			["default"] = require("fzf-lua").actions.file_tabedit,
+			["default"] = function(ipairs, opts)
+				local buf_name = vim.api.nvim_buf_get_name(0)
+
+				if buf_name == "" or buf_name:match("minintro$") then
+					require("fzf-lua").actions.file_edit(ipairs, opts)
+				else
+					require("fzf-lua").actions.file_tabedit(ipairs, opts)
+				end
+			end,
 			["ctrl-s"] = require("fzf-lua").actions.file_split,
 			["ctrl-v"] = require("fzf-lua").actions.file_vsplit,
 			["ctrl-f"] = require("fzf-lua").actions.file_edit,
@@ -548,10 +557,6 @@ vim.api.nvim_create_autocmd("BufEnter", {
 	end,
 })
 
-require("scrollbar").setup({
-	show_in_active_only = true,
-})
-
 require("gitsigns").setup({
 	signcolumn = true,
 	current_line_blame = false,
@@ -602,6 +607,17 @@ vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, {
 vim.keymap.set("n", "<leader>cc", function()
 	require("CopilotChat").toggle()
 end, { desc = "Toggle Copilot Chat" })
+
+require("scrollbar").setup({
+	show_in_active_only = true,
+	handle = {
+		color = colors.bg3,
+	},
+	handlers = {
+		cursor = false,
+	},
+})
+require("scrollbar.handlers.gitsigns").setup({})
 
 -- ============================================================================
 -- LSP, Linting, Formatting & Completion

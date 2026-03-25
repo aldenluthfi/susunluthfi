@@ -1,3 +1,5 @@
+#! /bin/bash
+
 [[ $- != *i* ]] && return
 
 export PYENV_ROOT="$HOME/.pyenv"
