@@ -8,7 +8,10 @@ prompt_command () {
   HISTCMD_before_last=$HISTCMD_previous
   HISTCMD_previous=$(history 1 | grep -oP '^\ +\K[0-9]+');
 
-  if [[ $HISTCMD_before_last = "$HISTCMD_previous" ]]; then
+  if [ "$HISTCMD_before_last" = "$HISTCMD_previous" ] && \
+      [ "$HISTCMD_before_last" ] && \
+      [ "$HISTCMD_previous" ];
+  then
     printf "\e[2A\e[2K\e[0J> \n"
   fi
 

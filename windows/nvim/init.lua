@@ -409,6 +409,7 @@ require("minintro").setup({
     colors = { color_map[vim.loop.os_gethostname():gsub("%..*", ""):lower()] },
 })
 
+local startup = false
 vim.api.nvim_create_autocmd("BufEnter", {
     group = augroup,
     pattern = "*",
@@ -416,7 +417,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
         local buf_name = vim.api.nvim_buf_get_name(0)
         local hl = vim.api.nvim_get_hl(0, { name = "Cursor", link = false })
 
-        if buf_name == "" or buf_name:match("minintro$") then
+        if (buf_name == "" and not startup) or buf_name:match("minintro$") then
             require("mini.trailspace").unhighlight()
             vim.opt.cursorline = false
             local hl = vim.api.nvim_get_hl_by_name("Cursor", true)
@@ -425,6 +426,10 @@ vim.api.nvim_create_autocmd("BufEnter", {
             vim.opt.guicursor:append("a:Cursor/lCursor")
             vim.opt.laststatus = 0
             vim.opt.cmdheight = 0
+
+            if buf_name == "" then
+                startup = true
+            end
         else
             vim.opt.cursorline = true
             local hl = vim.api.nvim_get_hl_by_name("Cursor", true)
@@ -433,6 +438,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
             vim.opt.guicursor:remove("a:Cursor/lCursor")
             vim.opt.laststatus = 2
             vim.opt.cmdheight = 1
+            startup = true
         end
     end,
 })
