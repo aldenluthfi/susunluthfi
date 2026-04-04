@@ -5,7 +5,7 @@ local M = {}
 local highlight = function(group, bg, fg, attr, sp)
 	fg = fg and "guifg=" .. fg or ""
 	bg = bg and "guibg=" .. bg or ""
-	attr = attr and "gui=" .. attr or ""
+	attr = attr and "gui=" .. attr .. " cterm=" .. attr or ""
 	sp = sp and "guisp=" .. sp or ""
 
 	vim.api.nvim_command("highlight " .. group .. " " .. fg .. " " .. bg .. " " .. attr .. " " .. sp)
@@ -81,7 +81,7 @@ highlight("WarningMsg", nil, colors.orange, "bold")
 highlight("ErrorMsg", colors.bg0, colors.red, "bold")
 highlight("ModeMsg", nil, colors.fg1, "bold")
 
-highlight("Comment", nil, colors.comment, "italic")
+highlight("Comment", nil, colors.comment, nil)
 highlight("Constant", nil, colors.orange, nil)
 highlight("String", nil, colors.green, nil)
 highlight("Character", nil, colors.green, nil)
@@ -186,6 +186,8 @@ highlight("MiniIconsPurple", nil, colors.purple, nil)
 highlight("MiniIconsGreen", nil, colors.green, nil)
 highlight("MiniIconsAzure", nil, colors.cyan, nil)
 highlight("MiniIconsCyan", nil, colors.cyan, nil)
+highlight("CopilotSuggestion", "none", colors.fg3, nil)
+highlight("CopilotAnnotation", "none", colors.cyan, "italic")
 
 -- Treesitter and links
 link("@function", "Function")

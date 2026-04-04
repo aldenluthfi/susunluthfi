@@ -2,7 +2,7 @@
 	email = aldenluthfi@gmail.com
 	name = aldenluthfi
 	signingkey = /home/aldenluthfi/.ssh/masterkey.pub
-[url "ssh://git@github.com/"]
+[url "git@github.com:"]
 	insteadOf = https://github.com/
 [gpg]
 	format = ssh

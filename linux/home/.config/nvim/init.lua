@@ -8,6 +8,7 @@ vim.opt.termguicolors = true
 vim.opt.number = true -- line number
 vim.opt.relativenumber = true -- relative line numbers
 vim.opt.cursorline = true -- highlight current line
+vim.opt.cursorlineopt = "both" -- highlight both number and line
 vim.opt.wrap = false -- do not wrap lines by default
 vim.opt.scrolloff = 10 -- keep 10 lines above/below cursor
 vim.opt.sidescrolloff = 10 -- keep 10 lines to left/right of cursor
@@ -65,8 +66,6 @@ vim.opt.path:append("**") -- include subdirs in search
 vim.opt.selection = "inclusive" -- include last char in selection
 vim.opt.mouse = "a" -- enable mouse support
 vim.opt.clipboard:append("unnamedplus") -- use system clipboard
-vim.opt.modifiable = true -- allow buffer modifications
-vim.opt.encoding = "utf-8" -- set encoding
 
 -- Folding: requires treesitter available at runtime; safe fallback if not
 vim.opt.foldmethod = "expr" -- use expression for folding
@@ -147,7 +146,7 @@ end
 setup_dynamic_statusline()
 
 -- ============================================================================
--- STATUSLINE
+-- TABLINE
 -- ============================================================================
 
 local function build_name_count()
@@ -350,9 +349,9 @@ vim.pack.add({
 		version = vim.version.range("1.*"),
 	},
 
-	-- Copilot
+	-- Copilot and CodeCompanion
 	"https://github.com/github/copilot.vim",
-	"https://github.com/CopilotC-Nvim/CopilotChat.nvim",
+	"https://github.com/olimorris/codecompanion.nvim",
 })
 
 packadd("nvim-treesitter")
@@ -371,9 +370,9 @@ packadd("mason-tool-installer.nvim")
 packadd("efmls-configs-nvim")
 packadd("blink.cmp")
 
--- Copilot
+-- Copilot and CodeCompanion
 packadd("copilot.vim")
-packadd("CopilotChat.nvim")
+packadd("codecompanion.nvim")
 
 -- ============================================================================
 -- PLUGIN CONFIGS
@@ -390,6 +389,7 @@ local setup_treesitter = function()
 		"css",
 		"javascript",
 		"json",
+		"yaml",
 		"lua",
 		"markdown",
 		"python",
@@ -426,9 +426,12 @@ end
 
 setup_treesitter()
 
-require("fzf-lua").setup({
+local fzf = require("fzf-lua")
+local fzf_actions = fzf.actions
+
+fzf.setup({
 	defaults = {
-		file_icons = false,
+		file_icons = "mini",
 	},
 	winopts = {
 		border = "rounded",
@@ -437,6 +440,12 @@ require("fzf-lua").setup({
 			border = "rounded",
 			layout = "vertical",
 			vertical = "down:60%",
+			winopts = {
+				number = true,
+				relativenumber = true,
+				cursorline = true,
+				cursorlineopt = "both",
+			},
 		},
 	},
 	actions = {
@@ -445,31 +454,32 @@ require("fzf-lua").setup({
 				local buf_name = vim.api.nvim_buf_get_name(0)
 
 				if buf_name == "" or buf_name:match("minintro$") then
-					require("fzf-lua").actions.file_edit(ipairs, opts)
+					fzf_actions.file_edit(ipairs, opts)
 				else
-					require("fzf-lua").actions.file_tabedit(ipairs, opts)
+					fzf_actions.file_tabedit(ipairs, opts)
 				end
 			end,
-			["ctrl-s"] = require("fzf-lua").actions.file_split,
-			["ctrl-v"] = require("fzf-lua").actions.file_vsplit,
-			["ctrl-f"] = require("fzf-lua").actions.file_edit,
+			["ctrl-s"] = fzf_actions.file_split,
+			["ctrl-v"] = fzf_actions.file_vsplit,
+			["ctrl-f"] = fzf_actions.file_edit,
 		},
 		["buffers"] = {
-			["default"] = require("fzf-lua").actions.buf_tabedit,
-			["ctrl-s"] = require("fzf-lua").actions.buf_split,
-			["ctrl-v"] = require("fzf-lua").actions.buf_vsplit,
-			["ctrl-f"] = require("fzf-lua").actions.buf_edit,
+			["default"] = fzf_actions.buf_tabedit,
+			["ctrl-s"] = fzf_actions.buf_split,
+			["ctrl-v"] = fzf_actions.buf_vsplit,
+			["ctrl-f"] = fzf_actions.buf_edit,
 		},
 	},
+	fzf_colors = { true },
 })
-require("fzf-lua").register_ui_select()
+fzf.register_ui_select()
 
-vim.keymap.set("n", "<leader>ff", require("fzf-lua").files, { desc = "FZF Files" })
-vim.keymap.set("n", "<leader>fg", require("fzf-lua").live_grep, { desc = "FZF Live Grep" })
-vim.keymap.set("n", "<leader>fb", require("fzf-lua").buffers, { desc = "FZF Buffers" })
-vim.keymap.set("n", "<leader>fh", require("fzf-lua").help_tags, { desc = "FZF Help Tags" })
-vim.keymap.set("n", "<leader>fx", require("fzf-lua").diagnostics_document, { desc = "FZF Diagnostics Document" })
-vim.keymap.set("n", "<leader>fX", require("fzf-lua").diagnostics_workspace, { desc = "FZF Diagnostics Workspace" })
+vim.keymap.set("n", "<leader>ff", fzf.files, { desc = "FZF Files" })
+vim.keymap.set("n", "<leader>fg", fzf.live_grep, { desc = "FZF Live Grep" })
+vim.keymap.set("n", "<leader>fb", fzf.buffers, { desc = "FZF Buffers" })
+vim.keymap.set("n", "<leader>fh", fzf.help_tags, { desc = "FZF Help Tags" })
+vim.keymap.set("n", "<leader>fx", fzf.diagnostics_document, { desc = "FZF Diagnostics Document" })
+vim.keymap.set("n", "<leader>fX", fzf.diagnostics_workspace, { desc = "FZF Diagnostics Workspace" })
 
 require("mini.ai").setup({})
 require("mini.comment").setup({})
@@ -549,7 +559,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
 			hl.blend = 0
 			vim.api.nvim_set_hl(0, "Cursor", hl)
 			vim.opt.guicursor:remove("a:Cursor/lCursor")
-			vim.opt.laststatus = 2
+			vim.opt.laststatus = 3
 			vim.opt.cmdheight = 1
 			vim.opt.showtabline = 2
 			startup = true
@@ -814,6 +824,13 @@ do
 			"c",
 			"cpp",
 			"html",
+			assistant = {
+				chat = {
+					enabled = true,
+					model = "gpt-3.5-turbo",
+				},
+			},
+
 			"css",
 			"javascript",
 			"typescript",
@@ -934,12 +951,12 @@ require("blink.cmp").setup({
 	},
 	completion = {
 		menu = {
+			scrollbar = false,
 			auto_show = true,
 			border = "rounded",
 			draw = {
 				columns = {
 					{ "kind_icon", "label", "label_description", gap = 1 },
-					{ "source_name" },
 				},
 				components = {
 					kind_icon = {
@@ -951,11 +968,6 @@ require("blink.cmp").setup({
 						highlight = function(ctx)
 							local _, hl = require("mini.icons").get("lsp", ctx.kind)
 							return hl
-						end,
-					},
-					source_name = {
-						text = function(ctx)
-							return "[" .. ctx.source_name .. "]"
 						end,
 					},
 				},
@@ -972,6 +984,49 @@ require("blink.cmp").setup({
 	},
 })
 
-vim.lsp.config["*"] = {
+require("lspconfig")["*"] = {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
 }
+
+-- ============================================================================
+-- AI INTEGRATIONS
+-- ============================================================================
+
+require("codecompanion").setup({
+	display = {
+		action_palette = { provider = "fzf_lua" },
+		diff = {
+			enabled = true,
+			window = {
+				width = function()
+					return math.min(120, vim.o.columns - 10)
+				end,
+				height = function()
+					return vim.o.lines - 4
+				end,
+				opts = {
+					border = "rounded",
+					winblend = 10,
+					number = true,
+					relativenumber = true,
+					cursorline = true,
+					cursorlineopt = "both",
+				},
+			},
+		},
+	},
+	interactions = {
+		acp = {
+			copilot_acp = function()
+				return require("codecompanion.adapters").extend("copilot_acp", {
+					defaults = { model = "gpt-4.1", mode = "plan" },
+				})
+			end,
+		},
+		chat = { adapter = "copilot_acp" },
+		inline = { adapter = "copilot" },
+	},
+})
+
+vim.keymap.set({ "n", "v" }, "<leader>a", ":CodeCompanionChat Toggle<CR>", { noremap = true, silent = true })
+vim.keymap.set("v", "ga", ":CodeCompanionChat Add<CR>", { noremap = true, silent = true })

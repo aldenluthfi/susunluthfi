@@ -1,17 +1,13 @@
 {
   "plugins": {
-    "CopilotChat.nvim": {
-      "rev": "9fec6c3c2a4069b1f649e116c10e6fbcf1463764",
-      "src": "https://github.com/CopilotC-Nvim/CopilotChat.nvim"
-    },
-    "blink-copilot": {
-      "rev": "7ad8209b2f880a2840c94cdcd80ab4dc511d4f39",
-      "src": "https://github.com/fang2hou/blink-copilot"
-    },
     "blink.cmp": {
       "rev": "451168851e8e2466bc97ee3e026c3dcb9141ce07",
       "src": "https://github.com/saghen/blink.cmp",
       "version": "1.0.0 - 2.0.0"
+    },
+    "codecompanion.nvim": {
+      "rev": "754979bd326ab144b4a30dc99049518878efe256",
+      "src": "https://github.com/olimorris/codecompanion.nvim"
     },
     "copilot.vim": {
       "rev": "a12fd5672110c8aa7e3c8419e28c96943ca179be",
@@ -22,15 +18,15 @@
       "src": "https://github.com/creativenull/efmls-configs-nvim"
     },
     "fzf-lua": {
-      "rev": "3b01dc83a893749f5ae4639f1aa0af523821840a",
+      "rev": "bde73a6886b607246095aa59f396de5e0d036890",
       "src": "https://www.github.com/ibhagwan/fzf-lua"
     },
     "gitsigns.nvim": {
-      "rev": "0a80125bace82d82847d40bc2c38a22d62c6dc2d",
+      "rev": "a462f416e2ce4744531c6256252dee99a7d34a83",
       "src": "https://www.github.com/lewis6991/gitsigns.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "a979821a975897b88493843301950c456a725982",
+      "rev": "38499e0bda64bc0f3ec6e7f03f8e13dd11c0fa00",
       "src": "https://github.com/mason-org/mason-lspconfig.nvim"
     },
     "mason-tool-installer.nvim": {
@@ -50,7 +46,7 @@
       "src": "https://github.com/SRCthird/minintro.nvim"
     },
     "nvim-lspconfig": {
-      "rev": "841c6d4139aedb8a3f2baf30cef5327371385b93",
+      "rev": "1a6d69206749a646ef28bfb39460610b14baff40",
       "src": "https://www.github.com/neovim/nvim-lspconfig"
     },
     "nvim-scrollbar": {
