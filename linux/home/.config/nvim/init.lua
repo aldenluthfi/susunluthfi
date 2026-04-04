@@ -614,10 +614,6 @@ vim.keymap.set("n", "<leader>dl", vim.diagnostic.open_float, {
 	desc = "Show line diagnostics",
 })
 
-vim.keymap.set("n", "<leader>cc", function()
-	require("CopilotChat").toggle()
-end, { desc = "Toggle Copilot Chat" })
-
 require("scrollbar").setup({
 	show_in_active_only = true,
 	handle = {
@@ -997,34 +993,20 @@ require("codecompanion").setup({
 		action_palette = { provider = "fzf_lua" },
 		diff = {
 			enabled = true,
-			window = {
-				width = function()
-					return math.min(120, vim.o.columns - 10)
-				end,
-				height = function()
-					return vim.o.lines - 4
-				end,
-				opts = {
-					border = "rounded",
-					winblend = 10,
-					number = true,
-					relativenumber = true,
-					cursorline = true,
-					cursorlineopt = "both",
-				},
-			},
 		},
 	},
-	interactions = {
+	adapters = {
 		acp = {
 			copilot_acp = function()
 				return require("codecompanion.adapters").extend("copilot_acp", {
-					defaults = { model = "gpt-4.1", mode = "plan" },
+					defaults = { model = "gpt-5.3-codex" },
 				})
 			end,
 		},
+	},
+	interactions = {
 		chat = { adapter = "copilot_acp" },
-		inline = { adapter = "copilot" },
+		inline = { adapter = "copilot_acp" },
 	},
 })
 
