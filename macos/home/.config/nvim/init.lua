@@ -427,12 +427,6 @@ fzf.setup({
 			["ctrl-v"] = fzf_actions.file_vsplit,
 			["ctrl-f"] = fzf_actions.file_edit,
 		},
-		buffers = {
-			default = fzf_actions.buf_tabedit,
-			["ctrl-s"] = fzf_actions.buf_split,
-			["ctrl-v"] = fzf_actions.buf_vsplit,
-			["ctrl-f"] = fzf_actions.buf_edit,
-		},
 	},
 	fzf_colors = { true },
 })
