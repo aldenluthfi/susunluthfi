@@ -659,11 +659,6 @@ local function lsp_on_attach(ev)
 	local bufnr = ev.buf
 	local lsp_opts = { noremap = true, silent = true, buffer = bufnr }
 
-	keymap.set("n", "<leader>gd", function()
-		fzf.lsp_definitions({ jump_to_single_result = true })
-	end, lsp_opts)
-
-	keymap.set("n", "<leader>gD", vim.lsp.buf.definition, lsp_opts)
 	keymap.set("n", "<leader>gS", function()
 		vim.cmd.vsplit()
 		vim.lsp.buf.definition()
@@ -686,9 +681,8 @@ local function lsp_on_attach(ev)
 		vim.diagnostic.jump({ count = -1 })
 	end, lsp_opts)
 
-	keymap.set("n", "<leader>fd", function()
-		fzf.lsp_definitions({ jump_to_single_result = true })
-	end, lsp_opts)
+	keymap.set("n", "<leader>fd", fzf.lsp_definitions, lsp_opts)
+	keymap.set("n", "<leader>fD", vim.lsp.buf.definition, lsp_opts)
 	keymap.set("n", "<leader>fr", fzf.lsp_references, lsp_opts)
 	keymap.set("n", "<leader>ft", fzf.lsp_typedefs, lsp_opts)
 	keymap.set("n", "<leader>fs", fzf.lsp_document_symbols, lsp_opts)
