@@ -311,19 +311,15 @@ api.nvim_create_autocmd("FileType", {
 -- PLUGINS (vim.pack)
 -- ===========================================================================
 
-local function packadd(name)
-	vim.cmd.packadd(name)
-end
-
 vim.pack.add({
-	"https://www.github.com/lewis6991/gitsigns.nvim",
-	"https://www.github.com/echasnovski/mini.nvim",
-	"https://www.github.com/ibhagwan/fzf-lua",
+	"https://github.com/lewis6991/gitsigns.nvim",
+	"https://github.com/echasnovski/mini.nvim",
+	"https://github.com/ibhagwan/fzf-lua",
 	"https://github.com/nvim-treesitter/nvim-treesitter",
 	"https://github.com/SRCthird/minintro.nvim",
 	"https://github.com/nvim-lua/plenary.nvim",
 	"https://github.com/petertriho/nvim-scrollbar",
-	"https://www.github.com/neovim/nvim-lspconfig",
+	"https://github.com/neovim/nvim-lspconfig",
 	"https://github.com/mason-org/mason.nvim",
 	"https://github.com/mason-org/mason-lspconfig.nvim",
 	"https://github.com/WhoIsSethDaniel/mason-tool-installer.nvim",
@@ -335,26 +331,6 @@ vim.pack.add({
 	"https://github.com/github/copilot.vim",
 	"https://github.com/olimorris/codecompanion.nvim",
 })
-
-for _, plugin in ipairs({
-	"nvim-treesitter",
-	"gitsigns.nvim",
-	"mini.nvim",
-	"fzf-lua",
-	"plenary.nvim",
-	"minintro.nvim",
-	"nvim-scrollbar",
-	"nvim-lspconfig",
-	"mason.nvim",
-	"mason-lspconfig.nvim",
-	"mason-tool-installer.nvim",
-	"efmls-configs-nvim",
-	"blink.cmp",
-	"copilot.vim",
-	"codecompanion.nvim",
-}) do
-	packadd(plugin)
-end
 
 -- ===========================================================================
 -- TREESITTER
@@ -605,6 +581,8 @@ gitsigns.setup({
 	linehl = false,
 })
 
+map("n", "[h", gitsigns.prev_hunk, "Previous hunk")
+map("n", "]h", gitsigns.next_hunk, "Next hunk")
 map("n", "<leader>hg", gitsigns.stage_hunk, "Stage hunk")
 map("n", "<leader>hr", gitsigns.reset_hunk, "Reset hunk")
 map("n", "<leader>hp", gitsigns.preview_hunk, "Preview hunk")
@@ -943,8 +921,48 @@ require("lspconfig")["*"] = {
 
 require("codecompanion").setup({
 	display = {
+		chat = {
+			intro_message = "",
+			separator = "─",
+			show_context = true,
+			show_header_separator = true,
+			show_settings = false,
+			show_token_count = true,
+			show_tools_processing = true,
+			start_in_insert_mode = false,
+			window = {
+				sticky = true,
+				width = 0.35,
+				opts = {
+					cursorline = true,
+					cursorlineopt = "both",
+					colorcolumn = "",
+				},
+			},
+		},
 		action_palette = { provider = "fzf_lua" },
-		diff = { enabled = true },
+		diff = {
+			enabled = true,
+			window = {
+				width = function()
+					return math.min(120, vim.o.columns - 10)
+				end,
+				height = function()
+					return vim.o.lines - 4
+				end,
+				opts = {
+					number = true,
+					relativenumber = true,
+					cursorline = true,
+					cursorlineopt = "both",
+					colorcolumn = "",
+				},
+			},
+			word_highlights = {
+				additions = true,
+				deletions = true,
+			},
+		},
 	},
 	adapters = {
 		http = {
