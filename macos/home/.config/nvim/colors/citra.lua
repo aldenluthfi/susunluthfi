@@ -8,10 +8,7 @@ local highlight = function(group, bg, fg, attr, sp)
 	attr = attr and "gui=" .. attr .. " cterm=" .. attr or ""
 	sp = sp and "guisp=" .. sp or ""
 
-	vim.api.nvim_command(
-		"highlight " .. group .. " " .. fg .. " " .. bg .. " "
-			.. attr .. " " .. sp
-	)
+	vim.api.nvim_command("highlight " .. group .. " " .. fg .. " " .. bg .. " " .. attr .. " " .. sp)
 end
 
 local link = function(target, group)
