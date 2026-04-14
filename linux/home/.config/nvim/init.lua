@@ -204,6 +204,18 @@ local function map(mode, lhs, rhs, desc, extra)
 	keymap.set(mode, lhs, rhs, opts)
 end
 
+api.nvim_create_user_command("SaveCloseAll", function()
+	vim.cmd("wall")
+
+	for _, bufnr in ipairs(api.nvim_list_bufs()) do
+		if api.nvim_buf_is_loaded(bufnr) and vim.bo[bufnr].buflisted then
+			pcall(api.nvim_buf_delete, bufnr, { force = false })
+		end
+	end
+end, { desc = "Save all files and close all listed buffers" })
+
+map("n", "<leader>qa", "<cmd>SaveCloseAll<cr>", "Save all and close all buffers")
+
 map("n", "j", function()
 	return vim.v.count == 0 and "gj" or "j"
 end, "Down (wrap-aware)", { expr = true })
