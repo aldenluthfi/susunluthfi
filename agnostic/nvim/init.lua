@@ -8,6 +8,21 @@ local opt_local = vim.opt_local
 
 local colors = vim.g.citra_colors
 
+local function load_env(file)
+	local f = io.open(file, "r")
+	if not f then
+		return
+	end
+	for line in f:lines() do
+		for k, v in string.gmatch(line, "([%w_]+)=([%w_./-]+)") do
+			vim.env[k] = v
+		end
+	end
+	f:close()
+end
+
+load_env(vim.fn.stdpath("config") .. "/.env")
+
 -- ===========================================================================
 -- EDITOR OPTIONS
 -- ===========================================================================
@@ -965,13 +980,11 @@ require("codecompanion").setup({
 		},
 	},
 	adapters = {
-		http = {
-			copilot = function()
-				return require("codecompanion.adapters").extend("copilot", {
-					schema = {
-						model = {
-							default = "gemini-3.1-pro",
-						},
+		acp = {
+			claude_code = function()
+				return require("codecompanion.adapters").extend("claude_code", {
+					env = {
+						CLAUDE_CODE_OAUTH_TOKEN = vim.env.CLAUDE_CODE_OAUTH_TOKEN,
 					},
 				})
 			end,
