@@ -384,6 +384,7 @@ local function setup_treesitter()
 		"typescript",
 		"bash",
 		"java",
+		"haskell",
 	}
 
 	local installed = ts_config.get_installed()
@@ -748,6 +749,7 @@ require("mason-lspconfig").setup({
 		"bashls",
 		"jdtls",
 		"efm",
+		"hls",
 	},
 	automatic_installation = true,
 })
@@ -766,6 +768,8 @@ require("mason-tool-installer").setup({
 		"clang-format",
 		"cpplint",
 		"google-java-format",
+		"fourmolu",
+        "hlint"
 	},
 	auto_update = true,
 	run_on_start = true,
@@ -785,6 +789,7 @@ do
 	local cpplint = require("efmls-configs.linters.cpplint")
 	local rustfmt = require("efmls-configs.formatters.rustfmt")
 	local gjf = require("efmls-configs.formatters.google_java_format")
+    local fourmolu = require("efmls-configs.formatters.fourmolu")
 
 	vim.lsp.config("efm", {
 		filetypes = {
@@ -801,6 +806,7 @@ do
 			"python",
 			"sh",
 			"java",
+			"haskell",
 		},
 		init_options = { documentFormatting = true },
 		settings = {
@@ -821,6 +827,7 @@ do
 				markdown = { prettier_d },
 				python = { flake8, black },
 				sh = { shellcheck, shfmt },
+				haskell = { fourmolu },
 			},
 		},
 	})
@@ -847,6 +854,8 @@ api.nvim_create_autocmd("BufWritePre", {
 		"*.cpp",
 		"*.h",
 		"*.hpp",
+		"*.hs",
+		"*.lhs",
 	},
 	callback = function(args)
 		if vim.bo[args.buf].buftype ~= "" then
@@ -935,50 +944,6 @@ require("lspconfig")["*"] = {
 -- ===========================================================================
 
 require("codecompanion").setup({
-	display = {
-		chat = {
-			intro_message = "",
-			separator = "─",
-			show_context = true,
-			show_header_separator = true,
-			show_settings = false,
-			show_token_count = true,
-			show_tools_processing = true,
-			start_in_insert_mode = false,
-			window = {
-				sticky = true,
-				width = 0.35,
-				opts = {
-					cursorline = true,
-					cursorlineopt = "both",
-					colorcolumn = "",
-				},
-			},
-		},
-		action_palette = { provider = "fzf_lua" },
-		diff = {
-			enabled = true,
-			window = {
-				width = function()
-					return math.min(120, vim.o.columns - 10)
-				end,
-				height = function()
-					return vim.o.lines - 4
-				end,
-				opts = {
-					number = true,
-					relativenumber = true,
-					cursorline = true,
-					cursorlineopt = "both",
-					colorcolumn = "",
-				},
-			},
-			word_highlights = {
-				additions = true,
-				deletions = true,
-			},
-		},
-	},
 	adapters = {
 		acp = {
 			claude_code = function()
@@ -991,7 +956,6 @@ require("codecompanion").setup({
 		},
 	},
 	interactions = {
-		chat = { adapter = "copilot" },
 		inline = { adapter = "copilot" },
 	},
 })
