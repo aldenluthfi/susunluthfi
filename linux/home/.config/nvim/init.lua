@@ -769,7 +769,7 @@ require("mason-tool-installer").setup({
 		"cpplint",
 		"google-java-format",
 		"fourmolu",
-        "hlint"
+		"hlint",
 	},
 	auto_update = true,
 	run_on_start = true,
@@ -789,7 +789,7 @@ do
 	local cpplint = require("efmls-configs.linters.cpplint")
 	local rustfmt = require("efmls-configs.formatters.rustfmt")
 	local gjf = require("efmls-configs.formatters.google_java_format")
-    local fourmolu = require("efmls-configs.formatters.fourmolu")
+	local fourmolu = require("efmls-configs.formatters.fourmolu")
 
 	vim.lsp.config("efm", {
 		filetypes = {
@@ -935,9 +935,33 @@ require("blink.cmp").setup({
 	},
 })
 
-require("lspconfig")["*"] = {
+vim.lsp.config("*", {
 	capabilities = require("blink.cmp").get_lsp_capabilities(),
-}
+})
+
+local function find_project_root()
+	local dir = vim.fn.getcwd()
+	while dir ~= "" and dir ~= "/" do
+		if vim.fn.isdirectory(dir .. "/incl") == 1 or vim.fn.isdirectory(dir .. "/src") == 1 then
+			return dir
+		end
+		dir = vim.fs.dirname(dir)
+	end
+	return nil
+end
+
+vim.lsp.config("clangd", {
+	root_dir = find_project_root,
+})
+
+vim.lsp.config("lua_ls", {
+	settings = {
+		Lua = {
+			diagnostics = { globals = { "vim" } },
+			telemetry = { enable = false },
+		},
+	},
+})
 
 -- ===========================================================================
 -- AI INTEGRATIONS

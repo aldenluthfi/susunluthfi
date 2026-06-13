@@ -36,6 +36,6 @@ export PYENV_ROOT="$HOME/.pyenv"
 eval "$(pyenv init -)"
 
 export PATH="/opt/homebrew/opt/rustup/bin:$PATH"
+export PATH="$HOME/.ghcup/bin:$PATH"
 
 fastfetch
-export PATH="$HOME/.ghcup/bin:$PATH"
